@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malin portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Scripts -->
+    <script src="./js/contact-modal.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+</head>
+<body>
+    <div id="hem" class="container">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="site-header__inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img class="branding" src="./assets/wbm_icon_color 1.svg" alt="">
+                    malinliedholm.se
+                </a>
+
+                <!-- Menu -->
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#om-mig" class="menu__link">Om mig</a></li>
+                        <li class="menu__item"><a href="#alster" class="menu__link">Portfolio</a></li>
+                        <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
+                    </ul>
+                </nav>
+                    
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero__inner">
+                <figure class="hero__image">
+                    <img src="assets/Vektor-Malin.jpg" alt="">
+                </figure>
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Malin Liedholm
+                    </h1>
+                    <h6 class="hero__description">
+                        - din webbutvecklare med öga för <strong class="orange">design</strong> och detaljer
+                    </h6>
+                        <div class="hero__button">   
+                        <button id="contact-button" class="button">Kontakta mig!</button>
+                        </div> 
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact modal -->
+        <dialog id="contact-modal" class="modal">
+            <button id="contact-close" class="modal__close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="currentColor"/>
+                </svg>
+            </button>
+
+            <h3 class="modal__title">Skriv till mig!</h3>
+            <form action="mailto:malineliedholm@gmail.com" method="POST" enctype="text/plain" class="modal__form">
+
+                <input type="text" placeholder="Name">
+
+                <input type="text" placeholder="Email">
+
+                <textarea name="" id="" placeholder="Your message"></textarea>
+
+                <button type="submit" class="button">Send</button>
+                
+            </form>
+        </dialog>
+
+        <!-- About -->
+        <section id="om-mig" class="about">
+            <div class="about__inner">
+                <h3 class="about__title">
+                    Det här är jag
+                </h3>
+                <!-- About content -->
+                <div class="about__content">
+                    
+                    <p class="about__excerpt">
+                        Jag vill bygga webbplatser som är både funktionella och vackra. 
+                        Utan att tappa bort vare sig design eller användarvänlighet längs vägen.
+                        <br>
+                        <br>
+                        Jag är alltid på jakt efter nya utmaningar och möjligheter att växa som utvecklare.
+                        Med en bakgrund som projektledare så är jag van att arbeta inom given tidsram och budget.
+                        Jag är en problemlösare som alltid strävar efter att hitta den bästa lösningen för mina kunder.
+                        <br>
+                        <br>
+                        Noggrannhet, struktur och planering är viktiga delar av mitt arbete. Jag lämnar ingen detalj åt slumpen. 
+                    </p>
+
+                    <div class="about__skills">
+                        <ul class="about-list">
+                            <li class="about-list__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                                </svg>
+
+                                <p class="about__skill">HTML</p>
+                            </li>
+                            <li class="about-list__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                                </svg>
+
+                                <p class="about__skill">CSS</p>
+                            </li>
+                            <li class="about-list__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                                </svg>
+
+                                <p class="about__skill">JavaScript</p>
+                            </li>
+                            <li class="about-list__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                                </svg>
+
+                                <p class="about__skill">WordPress</p>
+                            </li>
+                            <li class="about-list__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                                </svg>
+
+                                <p class="about__skill">Figma</p>
+                            </li>
+                            <li class="about-list__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                    <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                                    <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                                </svg>
+
+                                <p class="about__skill">Photoshop/Illustrator</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+          <!-- Portfolio -->
+        <section id="alster" class="portfolio">
+            <div class="portfolio__inner">
+                <h3 class="portfolio__title">Portfolio</h3>
+                <p class="portfolio__content">
+                    Här är några av mina senaste projekt. Jag har arbetat med allt från små företagssajter till hemsidor för föreningar. 
+                    Jag strävar alltid efter att skapa användarvänliga och responsiva webbplatser som är lätta att navigera.
+                </p>
+
+                    <!-- Gallery -->
+                    <div class="gallery"> 
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-slide">
+                                <img src="assets/bee-8355726_1280.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/dog-6934437_1280.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/butterfly-8323783_1280.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next">
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                </svg>
+                            
+                        </div>
+                        <div class="swiper-button-prev">
+                           
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                                </svg>
+                            
+                        </div>
+                    </div>
+                    </div>
+            </div>    
+
+        </section>
+
+        <!-- Site footer -->
+        <footer id="kontakt" class="site-footer">
+            <div class="site-footer__inner">
+                <div class="site-footer__content">
+
+                    <!-- Branding -->
+                    <div class="site-footer__branding">
+                        <img class="site-footer__logo" src="./assets/wbm_icon_color.svg" alt="">
+                    </div>
+
+                    <!-- Links -->
+                    <div class="site-footer__menu">
+                        <h4 class="site-footer__title">Links</h4>
+
+                        <nav class="menu menu--vertical">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="#hem" class="menu__link">Hem</a></li>
+                                <li class="menu__item"><a href="#om-mig" class="menu__link">Om mig</a></li>
+                                <li class="menu__item"><a href="#alster" class="menu__link">Portfolio</a></li>
+                                <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
+                            </ul>    
+                        </nav>
+                    </div> 
+
+                    <!-- Contact -->
+                    <div class="site-footer__contact">
+                        <h4 class="site-footer__title">Kontakta mig</h4>
+                        <p class="site-footer__info">
+                            <strong> Malin Liedholm </strong><br>
+                            0727-30 08 13 <br>
+                        </p>
+                        <a href="mailto:hello@malinliedholm.se" class="site-footer__email">hello@malinliedholm.se</a>
+
+                        <div class="site-footer__social">
+                            <ul class="social__list">
+                                <li class="social__item social__item--instagram">
+                                    <a href="https://www.instagram.com/malin.liedholm/#" class="social__link">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6 0H28.4C34.8 0 40 5.2 40 11.6V28.4C40 31.4765 38.7779 34.427 36.6024 36.6024C34.427 38.7779 31.4765 40 28.4 40H11.6C5.2 40 0 34.8 0 28.4V11.6C0 8.52349 1.22214 5.57298 3.39756 3.39756C5.57298 1.22214 8.52349 0 11.6 0ZM11.2 4C9.29044 4 7.45909 4.75857 6.10883 6.10883C4.75857 7.45909 4 9.29044 4 11.2V28.8C4 32.78 7.22 36 11.2 36H28.8C30.7096 36 32.5409 35.2414 33.8912 33.8912C35.2414 32.5409 36 30.7096 36 28.8V11.2C36 7.22 32.78 4 28.8 4H11.2ZM30.5 7C31.163 7 31.7989 7.26339 32.2678 7.73223C32.7366 8.20107 33 8.83696 33 9.5C33 10.163 32.7366 10.7989 32.2678 11.2678C31.7989 11.7366 31.163 12 30.5 12C29.837 12 29.2011 11.7366 28.7322 11.2678C28.2634 10.7989 28 10.163 28 9.5C28 8.83696 28.2634 8.20107 28.7322 7.73223C29.2011 7.26339 29.837 7 30.5 7ZM20 10C22.6522 10 25.1957 11.0536 27.0711 12.9289C28.9464 14.8043 30 17.3478 30 20C30 22.6522 28.9464 25.1957 27.0711 27.0711C25.1957 28.9464 22.6522 30 20 30C17.3478 30 14.8043 28.9464 12.9289 27.0711C11.0536 25.1957 10 22.6522 10 20C10 17.3478 11.0536 14.8043 12.9289 12.9289C14.8043 11.0536 17.3478 10 20 10ZM20 14C18.4087 14 16.8826 14.6321 15.7574 15.7574C14.6321 16.8826 14 18.4087 14 20C14 21.5913 14.6321 23.1174 15.7574 24.2426C16.8826 25.3679 18.4087 26 20 26C21.5913 26 23.1174 25.3679 24.2426 24.2426C25.3679 23.1174 26 21.5913 26 20C26 18.4087 25.3679 16.8826 24.2426 15.7574C23.1174 14.6321 21.5913 14 20 14Z" fill="#1E2187"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item social__item--facebook">
+                                    <a href="https://www.facebook.com/malin.liedholm?locale=sv_SE" class="social__link">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M40 20C40 8.96 31.04 0 20 0C8.96 0 0 8.96 0 20C0 29.68 6.88 37.74 16 39.6V26H12V20H16V15C16 11.14 19.14 8 23 8H28V14H24C22.9 14 22 14.9 22 16V20H28V26H22V39.9C32.1 38.9 40 30.38 40 20Z" fill="#1E2187"/>
+                                            </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div> 
+                   
+                </div>
+                <div class="site-footer__copyright">
+                    <p>© Copyright 2025 - Malin Liedholm, All rights reserved</p>
+                </div> 
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Init JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.mySwiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+</body>
+</html>
