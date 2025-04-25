@@ -50,6 +50,8 @@
     }
     body {
         background-color: var(--color-background);
+        font-family: var(--font-sans-1);
+        color: var(--color-dark);
         margin: 0;
         padding: 0;
     }
@@ -62,10 +64,6 @@
         max-width: 100%;
     }
     
-    body {
-        font-family: var(--font-sans-1);
-        color: var(--color-dark);
-    }
 
     html {
         scroll-behavior: smooth;
@@ -203,8 +201,8 @@
     .button:focus,
     .menu__link:focus,
     .modal__close:focus {
-    outline: 2px dashed var(--color-dark);
-    outline-offset: 4px;
+        outline: 2px dashed var(--color-dark);
+        outline-offset: 4px;
     }
 
     .hero,
@@ -239,6 +237,14 @@
         align-items: center;
     }
 
+    .site-header__menu-group {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: auto; /* skickar gruppen till höger */
+    }
+    
+
     .branding {
         width: 50px;
         height: auto;
@@ -250,12 +256,108 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+    /* Grundlayout (desktop) */
     .menu__list {
-        list-style: none; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+    }
+
+    .menu--desktop {
+    display: flex;
+    flex-direction: row;
+    }
+
+    /* Mobilmeny - döljs som standard */
+    .menu--mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-lightblue);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 49;
+    }
+
+    /* När menyn öppnas */
+    .site-header.menu--open .menu--mobile {
         display: flex;
-        margin: 0;
-        padding: 0;
-        gap: 1.5rem;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media screen and (max-width: 1024px) {
+        .menu--desktop {
+            display: none; /* döljer desktopmenyn */
+        }
+    
+        .menu-button {
+            display: block;
+        }
+    
+        .menu--mobile {
+            display: none;
+        }
+    
+        .site-header.menu--open .menu--mobile {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+      }
+
+    /* RESPONSIVE LOGIK */
+    @media screen and (max-width: 1024px) {
+        .menu--desktop {
+            display: none; /* Döljer desktopmenyn */
+        }
+
+        .menu-button {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .menu--mobile {
+            display: none !important;
+        }
+
+        .menu-button {
+            display: none;
+        }
+    }
+
+    /* Animation för menyöppning */
+    #menu-response {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-lightblue);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 49;
+    }
+
+    .site-header.menu--open #menu-response {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
     }
 
     .menu__link {
@@ -269,6 +371,13 @@
     
     .menu__item {
         position: relative;
+    }
+
+    .menu-button {
+        background: none;
+        border: none;
+        padding: 0;
+        color: var(--color-dark);
     }
 
     /* Hero */
@@ -289,7 +398,7 @@
 
     .hero__image {
         flex: 1;
-        max-width: 600px;
+        max-width: 500px;
         height: auto;
     }
 
@@ -313,6 +422,28 @@
         justify-content: left;
         margin-top: 8rem;
     }
+
+    @media screen and (max-width: 1024px) {
+        .hero__inner {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .hero__image {
+          max-width: 300px; /* eller t.ex. 80% beroende på vad som passar din design */
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+      
+        .hero__content {
+          align-items: center; /* centrerar texten */
+        }
+      
+        .hero__button {
+          justify-content: center;
+        }
+      }
 
     /* Om mig */
     
@@ -338,6 +469,7 @@
 
     .about__excerpt {
         max-width: 700px;
+
     }
 
     .about__skills {
@@ -395,6 +527,7 @@
         border-radius: 10px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         z-index: 10;
+
       }
   
       .swiper {
@@ -427,25 +560,22 @@
         background-color: var(--color-lightblue);
     }
 
-    .site-footer__branding {
-        width: 600px;
+    .site-footer__inner {      
         display: flex;
-        justify-content: left;
+        flex-direction: column;
         align-items: center;
-    }
-
-    .site-footer__logo {
-        width: 250px;
-        height: auto;
-        padding-top: var(--section-gap-items);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--section-gap-inner);
+        
     }
 
     .site-footer__content {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        
+        flex-direction: row;
+        gap: 32rem;
     }
+
 
     .site-footer__menu {
         justify-content: center;
@@ -454,10 +584,6 @@
 
     .menu__item {
         list-style: none;
-    }
-
-    .site-footer__contact {
-        margin-left: auto;
     }
 
     .site-footer__email {
@@ -498,4 +624,94 @@
         width: 40px;
         height: 40px;
     }
+
+    /* ============================
+   RESPONSIV DESIGN
+   ============================ */
+
+    /* ----- BREAKPOINT: 1024px ----- */
+    @media screen and (max-width: 1024px) {
+
+    /* Hero sektionen staplas */
+    .hero__inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .hero__image {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .hero__button {
+      justify-content: center;
+    }
+  
+    /* About sektionen staplas */
+    .about__content {
+      flex-direction: column;
+      gap: var(--section-gap-small);
+    }
+  
+    .about__skills {
+      margin: 2rem 0 0 0;
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .gallery {
+        max-width: 100%;
+        margin: 2rem auto;
+        padding: 1rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
     
+    .swiper {
+        width: 100%;
+    }
+    
+    .swiper-slide img {
+        border-radius: 4px; /* Lite mjukare hörn på mindre skärmar */
+    }
+    }
+
+    
+      
+  
+  /* ----- BREAKPOINT: 768px (mobil) ----- */
+    @media screen and (max-width: 768px) {
+  
+    /* Footer blir kolumn */
+    .site-footer__content {
+      flex-direction: column;
+      gap: var(--section-gap-items);
+      align-items: center;
+      text-align: center;
+    }
+  
+    .site-footer__contact,
+    .site-footer__menu {
+      margin: 0;
+      align-items: center;
+    }
+  
+    .site-footer__social {
+      justify-content: center;
+    }
+  
+    .social__list {
+      justify-content: center;
+    }
+
+    .gallery {
+        padding: 1rem 0.5rem;
+      }
+    
+      .swiper-slide img {
+        max-height: 300px;
+        object-fit: cover;
+      }
+    }
+  

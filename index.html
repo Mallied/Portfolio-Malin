@@ -16,6 +16,7 @@
 
     <!-- Scripts -->
     <script src="./js/contact-modal.js" defer></script>
+    <script src="./js/menu.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
 </head>
@@ -32,14 +33,30 @@
                 </a>
 
                 <!-- Menu -->
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="#om-mig" class="menu__link">Om mig</a></li>
-                        <li class="menu__item"><a href="#alster" class="menu__link">Portfolio</a></li>
-                        <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
-                    </ul>
-                </nav>
-                    
+                <div class="site-header__menu-group"> 
+                 <!-- Desktop-menu -->
+                    <nav class="menu">
+                        <ul class="menu__list menu--desktop">
+                            <li class="menu__item"><a href="#om-mig" class="menu__link">Om mig</a></li>
+                            <li class="menu__item"><a href="#alster" class="menu__link">Portfolio</a></li>
+                            <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Mobile menu -->
+                    <nav class="menu">
+                        <ul id="menu-response" class="menu__list menu--mobile">
+                            <li class="menu__item"><a href="#om-mig" class="menu__link">Om mig</a></li>
+                            <li class="menu__item"><a href="#alster" class="menu__link">Portfolio</a></li>
+                            <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Hamburger menu -->
+                    <button id="menu-button" class="menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </button>
+                </div>    
             </div>
         </header>
 
@@ -74,11 +91,11 @@
             <h3 class="modal__title">Skriv till mig!</h3>
             <form action="mailto:malineliedholm@gmail.com" method="POST" enctype="text/plain" class="modal__form">
 
-                <input type="text" placeholder="Name">
+                <input type="text" name="name" placeholder="Namn" aria-label="Namn">
 
-                <input type="text" placeholder="Email">
+                <input type="text" name="text" placeholder="E-post" aria-label="E-post">
 
-                <textarea name="" id="" placeholder="Your message"></textarea>
+                <textarea name="message" id="" placeholder="Meddelande" aria-label="Meddelande"></textarea>
 
                 <button type="submit" class="button">Send</button>
                 
@@ -164,7 +181,7 @@
             </div>
         </section>
 
-          <!-- Portfolio -->
+        <!-- Portfolio -->
         <section id="alster" class="portfolio">
             <div class="portfolio__inner">
                 <h3 class="portfolio__title">Portfolio</h3>
@@ -215,14 +232,9 @@
             <div class="site-footer__inner">
                 <div class="site-footer__content">
 
-                    <!-- Branding -->
-                    <div class="site-footer__branding">
-                        <img class="site-footer__logo" src="./assets/wbm_icon_color.svg" alt="">
-                    </div>
-
                     <!-- Links -->
                     <div class="site-footer__menu">
-                        <h4 class="site-footer__title">Links</h4>
+                        <h4 class="site-footer__title">Länkar</h4>
 
                         <nav class="menu menu--vertical">
                             <ul class="menu__list">
