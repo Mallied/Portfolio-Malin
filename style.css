@@ -168,6 +168,13 @@
         width: 600px;
     }
     
+
+    .modal__input {
+        margin: 0;
+        padding: 0;
+        font-size: 0.75rem;
+    }
+    
     .modal::backdrop {
         background-color: var(--color-textlight);
         opacity: 0.5;
@@ -186,7 +193,6 @@
         display: grid;
         justify-items: start;
         width: 100%;
-        gap: var(--section-gap-small);
     }
     
     .modal__form input,
@@ -316,15 +322,6 @@
       }
 
     /* RESPONSIVE LOGIK */
-    @media screen and (max-width: 1024px) {
-        .menu--desktop {
-            display: none; /* Döljer desktopmenyn */
-        }
-
-        .menu-button {
-            display: block;
-        }
-    }
 
     @media screen and (min-width: 1025px) {
         .menu--mobile {
@@ -385,15 +382,12 @@
         margin-top: calc(var(--menu-height) + var(--section-gap));
     }
 
-    .orange {
-        color: var(--color-orange);
-    }
-
     .hero__inner {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        column-gap: var(--section-gap-items);
+        column-gap: 10rem;
     }
 
     .hero__image {
