@@ -28,7 +28,7 @@
 
                 <!-- Logo -->
                 <a href="index.html" class="logo">
-                    <img class="branding" src="./assets/wbm_icon_color 1.svg" alt="">
+                    <!-- <img class="branding" src="./assets/wbm_icon_color 1.svg" alt=""> -->
                     malinliedholm.se
                 </a>
 
@@ -90,12 +90,18 @@
 
             <h3 class="modal__title">Skriv till mig!</h3>
             <form action="mailto:malineliedholm@gmail.com" method="POST" enctype="text/plain" class="modal__form">
+                <p class="modal__description">
+                    Jag är alltid intresserad av nya projekt och samarbeten. 
+                    Fyll i formuläret nedan så hör jag av mig så snart som möjligt.
+                </p>
+                <p class="modal__input">Namn</p>
+                <input type="text" name="name" aria-label="Namn">
 
-                <input type="text" name="name" placeholder="Namn" aria-label="Namn">
+                <p class="modal__input">E-post</p>
+                <input type="text" name="text" aria-label="E-post">
 
-                <input type="text" name="text" placeholder="E-post" aria-label="E-post">
-
-                <textarea name="message" id="" placeholder="Meddelande" aria-label="Meddelande"></textarea>
+                <p class="modal__input">Meddelande</p>
+                <textarea name="message" id="" aria-label="Meddelande"></textarea>
 
                 <button type="submit" class="button">Send</button>
                 
@@ -192,36 +198,36 @@
 
                     <!-- Gallery -->
                     <div class="gallery"> 
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-slide">
-                                <img src="assets/bee-8355726_1280.jpg" alt="">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-slide">
+                                    <img src="assets/bee-8355726_1280.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/dog-6934437_1280.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/butterfly-8323783_1280.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="assets/dog-6934437_1280.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="assets/butterfly-8323783_1280.jpg" alt="">
-                            </div>
-                        </div>
 
-                        <!-- Add Navigation -->
-                        <div class="swiper-button-next">
+                            <!-- Add Navigation -->
+                            <div class="swiper-button-next">
+                                
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                    </svg>
+                                
+                            </div>
+                            <div class="swiper-button-prev">
                             
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-                                </svg>
-                            
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                                    </svg>
+                                
+                            </div>
                         </div>
-                        <div class="swiper-button-prev">
-                           
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-                                </svg>
-                            
-                        </div>
-                    </div>
                     </div>
             </div>    
 
@@ -229,7 +235,9 @@
 
         <!-- Site footer -->
         <footer id="kontakt" class="site-footer">
+
             <div class="site-footer__inner">
+
                 <div class="site-footer__content">
 
                     <!-- Links -->
